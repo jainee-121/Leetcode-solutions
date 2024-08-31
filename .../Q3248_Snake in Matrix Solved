@@ -1,0 +1,14 @@
+class Solution(object):
+    def finalPositionOfSnake(self, n, commands):
+        i=0
+        j=0
+        for k in commands:
+            if (k=='RIGHT'):
+                j=j+1
+            if (k=='LEFT'):
+                j=j-1
+            if (k=='DOWN'):
+                i=i+1
+            if (k=='UP'):
+                i=i-1
+        return ((i*n)+j)
